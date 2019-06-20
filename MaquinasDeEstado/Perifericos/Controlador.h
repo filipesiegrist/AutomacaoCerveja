@@ -8,6 +8,8 @@
 #ifndef _CONTROLADOR_H_
 #define _CONTROLADOR_H_
 
+#include <Arduino.h>
+
 // Constante de controle
 #define Kp 1
 

@@ -27,7 +27,8 @@ public:
 	int temperatura_minima;
 	int temperatura_maxima;
 
-	SensorTemperatura();
+	SensorTemperatura(int);
+	SensorTemperatura(int, int, int);
 
 	// Estados do sistema
 	int leitura(void);
