@@ -10,6 +10,9 @@
 
 class Fervura {
 public:
+	// Flag que indica se ocorreu algum erro no sistema.
+	bool erro_de_funcionamento;
+
 	// A implementacao da maquina estados sera nesta funcao:
 	Fervura();
 

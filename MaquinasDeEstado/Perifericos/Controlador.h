@@ -24,6 +24,10 @@ private:
 	// Satura o duty cicle entre 0 e 1.
 	int saida_duty_cicle(int temperatura_medida);
 public:
+	// Flag que indica se ocorreu algum erro no sistema.
+	bool erro_de_funcionamento;
+
+	// Quem instanciar essa classe, tera que definir esta temperatura de referencia
 	int temperatura_referencia;
 
 	// A implementacao da maquina estados sera nesta funcao:

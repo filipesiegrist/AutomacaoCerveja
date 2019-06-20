@@ -10,12 +10,18 @@
 
 class Processo {
 public:
-	Processo();
-	~Processo();
+	// Flag que indica se ocorreu algum erro no sistema.
+	bool erro_de_funcionamento;
 
+	// A implementacao da maquina estados sera nesta funcao:
+	Processo();
+
+	// Estados do sistema
 	void brassagem(void);
 	void recirculacao(void);
 	void fervura(void);
+
+	~Processo();
 };
 
 #endif
