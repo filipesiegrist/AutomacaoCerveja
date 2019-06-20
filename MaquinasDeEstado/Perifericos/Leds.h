@@ -9,9 +9,9 @@
 #define _LEDS_H_
 
 // Pinos de saida
-#define LED_VERDE   10
+#define LED_VERDE    8
 #define LED_AMARELO  9
-#define LED_VERMELHO 8
+#define LED_VERMELHO 10
 
 class Leds {
 public:
