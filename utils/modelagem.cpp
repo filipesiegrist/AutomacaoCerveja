@@ -1,6 +1,37 @@
 
 #define time 50
 
+#define LED_VERMELHO 10
+#define LED_VERDE 10
+#define LED_AMARELO 10
+
+#define BOTAO_INICIO 10
+#define BOTAO_ACAO 10
+
+#define SENSOR_TEMPERATURA 10
+#define FOGO 10
+
+#define BOMBA 10
+
+digitalWrite(LED_VERMELHO,HIGH);
+digitalWrite(LED_VERDE,HIGH);
+digitalWrite(LED_AMARELO,HIGH);
+
+digitalWrite(LED_VERMELHO,LOW);
+digitalWrite(LED_VERDE,LOW);
+digitalWrite(LED_AMARELO,LOW);
+
+pinMode(,)
+
+pinMode(LED_VERMELHO, OUTPUT); 
+pinMode(LED_VERDE   , OUTPUT); 
+pinMode(LED_AMARELO , OUTPUT);
+pinMode(BOMBA , OUTPUT);
+pinMode(BOTAO_INICIO , INPUT);
+pinMode(BOTAO_ACAO , INPUT);
+
+
+
 class error{
 
 public:
