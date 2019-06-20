@@ -4,3 +4,17 @@
 * @Last Modified by:   filipe-ufsc
 * @Last Modified time: 2019-06-20 10:20:21
 */
+
+#ifndef _PROCESSO_H_
+#define _PROCESSO_H_
+
+class Processo {
+public:
+	Processo();
+	~Processo();
+	
+};
+
+#endif
+
+
