@@ -8,6 +8,8 @@
 #ifndef _SENSOR_TEMPERATURA_H_
 #define _SENSOR_TEMPERATURA_H_
 
+#include <Arduino.h>
+
 // Pino de entrada
 #define ENTRADA_SENSOR A0
 
