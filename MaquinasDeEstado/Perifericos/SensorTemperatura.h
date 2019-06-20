@@ -15,7 +15,9 @@ public:
 
 	// Estados do sistema
 	void inicio(void);
-	void (void);
+	void ligar(void);
+	int leitura(void);
+	void desligar(void);
 	void fim(void);
 
 	
