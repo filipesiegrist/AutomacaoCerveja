@@ -31,12 +31,12 @@ void Leds::set_red(void){
 }
 void Leds::set_yellow(void){
     reset();
-    digitalWrite(LED_AMARELO  ,LOW);
+    digitalWrite(LED_AMARELO  ,HIGH);
     return;
 }
 void Leds::set_green(void){
     reset();
-    digitalWrite(LED_VERDE    ,LOW);
+    digitalWrite(LED_VERDE    ,HIGH);
     return;
 }
 
