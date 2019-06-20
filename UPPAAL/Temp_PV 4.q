@@ -42,34 +42,6 @@ E<> Brassagem.Iodo_OK
 //NO_QUERY
 
 /*
-A recircula\u00e7\u00e3o sempre ir\u00e1 ocorrer com o fogo desligado.
-[SAFETY]
-*/
-A[] (Recirculacao.inicio_sedimento imply fogo==false )
-
-/*
-A recircula\u00e7\u00e3o somente ser\u00e1 iniciada se teste do iodo estiver finalizado.
-[SAFETY]
-*/
-A<>(Brassagem.Iodo_OK  imply Geral.Recirculacao)
-
-/*
-A Recircula\u00e7\u00e3o somente ser\u00e1 iniciado se teste do iodo for finalizado
-*/
-A<>(Brassagem.Iodo_OK imply Geral.Recirculacao)
-
-/*
-Uma vez iniciada a recircula\u00e7\u00e3o, eventualmente n\u00e3o ter\u00e3o mais sedimentos.
-[LIVENESS]
-*/
-E<>(Recirculacao.sedimento_OK)
-
-/*
-
-*/
-//NO_QUERY
-
-/*
 A transfer\u00eancia na lavagem sempre ocorrer\u00e1 com o fogo desligado
 [SAFETY]
 */
