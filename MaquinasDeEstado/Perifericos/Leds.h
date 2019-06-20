@@ -8,6 +8,11 @@
 #ifndef _LEDS_H_
 #define _LEDS_H_
 
+// Pinos de saida
+#define LED_VERDE   10
+#define LED_AMARELO  9
+#define LED_VERMELHO 8
+
 class Leds {
 public:
 	// A implementacao da maquina estados sera nesta funcao:
@@ -15,7 +20,10 @@ public:
 
 	// Estados do sistema
 	void inicio(void);
-	void (void);
+	void reset(void);
+	void set_red(void);
+	void set_yellow(void);
+	void set_green(void);
 	void fim(void);
 
 	
