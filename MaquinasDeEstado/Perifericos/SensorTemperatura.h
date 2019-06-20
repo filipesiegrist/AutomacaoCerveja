@@ -11,6 +11,10 @@
 // Pino de entrada
 #define ENTRADA_SENSOR A0
 
+// Temperaturas de referencia para o mapeamento do sinal do sensor
+#define TEMPERATURA_MINIMA_POSSIVEL 45
+#define TEMPERATURA_MAXIMA_POSSIVEL 85
+
 class SensorTemperatura {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
