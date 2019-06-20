@@ -9,7 +9,7 @@
 #define _SENSOR_TEMPERATURA_H_
 
 // Pino de entrada
-#define ENTRADA_SENSOR 14
+#define ENTRADA_SENSOR A0
 
 class SensorTemperatura {
 public:

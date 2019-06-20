@@ -12,7 +12,7 @@
 #define Kp 1
 
 //Pino de atuacao PWM
-#define AQUECEDOR 4
+#define AQUECEDOR 5
 
 class Controlador {
 private:
