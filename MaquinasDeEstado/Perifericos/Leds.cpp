@@ -10,6 +10,37 @@
 
 #include "Leds.h"
 
+// A implementacao da maquina estados sera nesta funcao:
+Leds::Leds(){
+    pinMode(LED_VERMELHO, OUTPUT); 
+    pinMode(LED_VERDE   , OUTPUT); 
+    pinMode(LED_AMARELO , OUTPUT);
+    reset();
+}
 
+void Leds::reset(void){
+    digitalWrite(LED_VERMELHO ,LOW); 
+    digitalWrite(LED_VERDE    ,LOW); 
+    digitalWrite(LED_AMARELO  ,LOW);
+    return;
+}
+void Leds::set_red(void){
+    reset();
+    digitalWrite(LED_VERMELHO ,HIGH);
+    return;
+}
+void Leds::set_yellow(void){
+    reset();
+    digitalWrite(LED_AMARELO  ,LOW);
+    return;
+}
+void Leds::set_green(void){
+    reset();
+    digitalWrite(LED_VERDE    ,LOW);
+    return;
+}
 
+Leds::~Leds(){
+    reset();
+}
 #endif
