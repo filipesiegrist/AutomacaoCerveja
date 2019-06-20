@@ -4,3 +4,30 @@
 * @Last Modified by:   filipe-ufsc
 * @Last Modified time: 2019-06-20 10:27:30
 */
+
+#ifndef _BRASSAGEM_H_
+#define _BRASSAGEM_H_
+
+class Brassagem {
+public:
+	// Flag que indica se ocorreu algum erro no sistema.
+	bool erro_de_funcionamento;
+
+	// A implementacao da maquina estados sera nesta funcao:
+	Brassagem();
+
+	// Estados do sistema
+	void inicio(void);
+	void T70G(void);
+	void add_ing(void);
+	void misturar(void);
+	void esperar(void);
+	void aguarda_iodo(void);
+	void iodo_ok(void);
+	void T75G(void);
+	void fim(void);
+
+	~Brassagem();
+};
+
+#endif
