@@ -10,7 +10,15 @@
 
 class SensorTemperatura {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	SensorTemperatura();
+
+	// Estados do sistema
+	void inicio(void);
+	void (void);
+	void fim(void);
+
+	
 	~SensorTemperatura();
 	
 };

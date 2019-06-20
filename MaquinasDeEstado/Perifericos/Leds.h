@@ -10,7 +10,15 @@
 
 class Leds {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	Leds();
+
+	// Estados do sistema
+	void inicio(void);
+	void (void);
+	void fim(void);
+
+	
 	~Leds();
 	
 };

@@ -12,7 +12,10 @@ class Processo {
 public:
 	Processo();
 	~Processo();
-	
+
+	void brassagem(void);
+	void recirculacao(void);
+	void fervura(void);
 };
 
 #endif

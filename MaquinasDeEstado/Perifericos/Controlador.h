@@ -10,7 +10,15 @@
 
 class Controlador {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	Controlador();
+
+	// Estados do sistema
+	void inicio(void);
+	void (void);
+	void fim(void);
+
+	
 	~Controlador();
 	
 };

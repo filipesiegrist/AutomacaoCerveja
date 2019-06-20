@@ -10,9 +10,18 @@
 
 class Fervura {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	Fervura();
+
+	// Estados do sistema
+	void inicio(void);
+	void adicione15g(void);
+	void wait55(void);
+	void add_resto(void);
+	void wait5(void);
+	void fim(void);
+
 	~Fervura();
-	
 };
 
 #endif

@@ -10,9 +10,21 @@
 
 class Brassagem {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	Brassagem();
+
+	// Estados do sistema
+	void inicio(void);
+	void T70G(void);
+	void add_ing(void);
+	void misturar(void);
+	void esperar(void);
+	void aguarda_iodo(void);
+	void iodo_ok(void);
+	void T75G(void);
+	void fim(void);
+
 	~Brassagem();
-	
 };
 
 #endif

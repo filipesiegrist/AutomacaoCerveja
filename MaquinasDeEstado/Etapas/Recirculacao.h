@@ -10,7 +10,16 @@
 
 class Recirculacao {
 public:
+	// A implementacao da maquina estados sera nesta funcao:
 	Recirculacao();
+
+	// Estados do sistema
+	void inicio(void);
+	void inicio_sedimento(void);
+	void sedimento_ok(void);
+	void fim(void);
+
+	
 	~Recirculacao();
 	
 };
