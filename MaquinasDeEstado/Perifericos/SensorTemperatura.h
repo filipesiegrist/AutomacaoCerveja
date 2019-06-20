@@ -8,6 +8,9 @@
 #ifndef _SENSOR_TEMPERATURA_H_
 #define _SENSOR_TEMPERATURA_H_
 
+// Pino de entrada
+#define ENTRADA_SENSOR 14
+
 class SensorTemperatura {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
