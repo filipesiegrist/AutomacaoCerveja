@@ -2,7 +2,7 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:21:45
 * @Last Modified by:   filipe-ufsc
-* @Last Modified time: 2019-06-29 12:52:04
+* @Last Modified time: 2019-06-29 17:09:35
 
 */
 
@@ -75,6 +75,13 @@ void Controlador::esquenta(int temperatura_in) {
 
 Controlador::~Controlador() {
 		analogWrite(AQUECEDOR, 0);
+}
+
+void ligaAquecedor() {
+	analogWrite(AQUECEDOR,1023);
+}
+void desligaAquecedor() {
+	analogWrite(AQUECEDOR,0);
 }
 
 #endif

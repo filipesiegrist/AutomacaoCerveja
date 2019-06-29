@@ -49,4 +49,9 @@ public:
 	~Controlador();
 };
 
+
+// Para utilizar apenas ligando e desligando a resistencia:
+void ligaAquecedor();
+void desligaAquecedor();
+
 #endif
