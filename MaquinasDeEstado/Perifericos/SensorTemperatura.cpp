@@ -2,12 +2,13 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:20:49
 * @Last Modified by:   filipe-ufsc
-* @Last Modified time: 2019-06-20 16:02:04
+* @Last Modified time: 2019-06-20 16:30:11
 */
 
 #ifndef _SENSOR_TEMPERATURA_CPP_
 #define _SENSOR_TEMPERATURA_CPP_
 
+#include <Arduino.h>
 #include "SensorTemperatura.h"
 
 SensorTemperatura::SensorTemperatura(int objetivo) {
