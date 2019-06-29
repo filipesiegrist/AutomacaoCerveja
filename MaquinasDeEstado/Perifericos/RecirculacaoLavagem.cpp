@@ -9,6 +9,7 @@
 #define _RECIRCULACAO_LAVAGEM_CPP_
 
 #include <Arduino.h>
+#include "Botao.h"
 #include "RecirculacaoLavagem.h"
 
 // Flag que indica se ocorreu algum erro no sistema.

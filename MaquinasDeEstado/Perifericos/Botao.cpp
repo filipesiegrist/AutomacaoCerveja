@@ -8,6 +8,7 @@
 #ifndef _BOTAO_CPP_
 #define _BOTAO_CPP_
 
+#include "Botao.h"
 #include <Arduino.h>
 
 void iniciaBotoes() {

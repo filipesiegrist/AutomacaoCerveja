@@ -8,6 +8,7 @@
 #ifndef _RECIRCULACAO_LAVAGEM_H_
 #define _RECIRCULACAO_LAVAGEM_H_
 
+
 class RecirculacaoLavagem {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.

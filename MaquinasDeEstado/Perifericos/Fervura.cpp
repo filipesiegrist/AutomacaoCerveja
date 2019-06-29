@@ -12,10 +12,10 @@
 
 #include "Fervura.h"
 #include "Controlador.h"
-#include "Botoes.h"
+#include "Botao.h"
 
-#define TEMPO_INICIO = 55 // minutos
-#define TEMPO_FIM = 5 // minutos
+#define TEMPO_INICIO 55 // minutos
+#define TEMPO_FIM 5 // minutos
 
 	// Flag que indica se ocorreu algum erro no sistema.
 	// bool erro_de_funcionamento;
@@ -41,7 +41,7 @@ void Fervura::adicione15g(void) {
 
 void Fervura::wait55(void) {
 	Serial.println("Esperando 55 minutos.");
-  	const int tempo = TEMPO_INICIO*60*1000; //converte para ms
+  	int tempo = TEMPO_INICIO; //converte para ms
   	delay(tempo);
 }
 
@@ -52,7 +52,7 @@ void Fervura::add_resto(void) {
 
 void Fervura::wait5(void) {
 	Serial.println("Esperando 5 minutos.");
-  	const int tempo = TEMPO_FIM*60*1000; //converte para ms
+  	int tempo = TEMPO_FIM; //converte para ms
   	delay(tempo);
 }
 
