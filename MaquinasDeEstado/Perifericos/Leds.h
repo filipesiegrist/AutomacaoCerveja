@@ -7,7 +7,7 @@
 
 #ifndef _LEDS_H_
 #define _LEDS_H_
-// #include <Arduino.h>
+#include <Arduino.h>
 // Pinos de saida
 #define LED_VERDE    8
 #define LED_AMARELO  9

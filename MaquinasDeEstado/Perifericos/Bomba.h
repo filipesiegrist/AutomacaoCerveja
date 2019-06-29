@@ -8,6 +8,16 @@
 #ifndef _BOMBA_H_
 #define _BOMBA_H_
 
+#include <Arduino.h>
+
 #define BOMBA 7
+
+class Bomba {
+public:
+  Bomba();
+  void liga();
+  void desliga();
+  ~Bomba();
+};
 
 #endif

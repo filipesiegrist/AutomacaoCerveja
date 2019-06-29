@@ -16,6 +16,8 @@
 #define TEMPERATURA_MINIMA_POSSIVEL 45
 #define TEMPERATURA_MAXIMA_POSSIVEL 85
 
+#define TEMPERATURA_PADRAO 65
+
 class SensorTemperatura {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
@@ -26,8 +28,7 @@ public:
 	int temperatura_minima;
 	int temperatura_maxima;
 
-	SensorTemperatura(int);
-	SensorTemperatura(int, int, int);
+	SensorTemperatura();
 
 	// Estados do sistema
 	int leitura(void);
@@ -36,8 +37,6 @@ public:
 	bool passou_do_limite_minimo(void);
 	void fim(void);
 
-
-	~SensorTemperatura();
 
 };
 

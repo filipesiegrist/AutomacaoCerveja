@@ -11,15 +11,10 @@
 #include <Arduino.h>
 #include "SensorTemperatura.h"
 
-SensorTemperatura::SensorTemperatura(int objetivo) {
-	temperatura_objetivo = objetivo;
+SensorTemperatura::SensorTemperatura() {
+	temperatura_objetivo = TEMPERATURA_PADRAO;
 }
 
-SensorTemperatura::SensorTemperatura(int objetivo, int minima, int maxima) {
-	temperatura_objetivo = objetivo;
-	temperatura_maxima = maxima;
-	temperatura_minima = minima;
-}
 
 int SensorTemperatura::leitura(void) {
   int valor_sensor = analogRead(ENTRADA_SENSOR);
