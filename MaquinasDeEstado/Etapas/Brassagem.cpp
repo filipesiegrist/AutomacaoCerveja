@@ -15,8 +15,8 @@ Brassagem::Brassagem(void){
 
 }
 // Estados do sistema
-void Brassagem::inicio(void){
-
+void Brassagem::inicio(bool resistencia){
+  bool resistencia=false;
   return;
 }
 void Brassagem::T70G(void){
