@@ -15,11 +15,11 @@
 // A implementacao da maquina estados sera nesta funcao:
 Brassagem::Brassagem(Leds &led){
   led=led;
-  controlador.temperatura_referencia=66;
 }
 // Estados do sistema
 void Brassagem::inicio(void){
   Serial.println("Aguardando inicialização");
+  Serial.println("Aperte o botão ON/OFF para prosseguir");
   led.set_yellow();
   esperaAcaoUsuario(BOTAO_ON_OFF);
   led.reset();
@@ -36,23 +36,23 @@ void Brassagem::T70G(void){
 }
 void Brassagem::add_ing(void){
   Serial.println("Adicione ingredientes !!");
+  Serial.println("Aperte o botão AÇÃO para prosseguir");
   led.set_yellow();
-  esperaAcaoUsuario(BOTAO_ON_OFF);
+  esperaAcaoUsuario(BOTAO_ACAO);
   led.reset();
   return;
 }
 void Brassagem::misturar(void){
   Serial.println("Misture os ingredientes !!");
+  Serial.println("Aperte o botão AÇÃO para prosseguir");
   led.set_yellow();
-  esperaAcaoUsuario(BOTAO_ON_OFF);
+  esperaAcaoUsuario(BOTAO_ACAO);
   led.reset();
   return;
 }
 void Brassagem::esperar(void){
   Serial.println("Aguarde 60 mins");
   led.set_green();
-  // Controlador controlador(66);
-  // mantem por 60 mins
   controlador.controla_temperatura();
   led.reset();
   return;
