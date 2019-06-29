@@ -17,12 +17,11 @@ public:
 	Fervura();
 
 	// Estados do sistema
-	void inicio(void);
+	void fervendo();
 	void adicione15g(void);
 	void wait55(void);
 	void add_resto(void);
 	void wait5(void);
-	void fim(void);
 
 	~Fervura();
 };
