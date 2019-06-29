@@ -2,11 +2,7 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:21:45
 * @Last Modified by:   filipe-ufsc
-<<<<<<< Updated upstream
-* @Last Modified time: 2019-06-20 16:19:10
-=======
-* @Last Modified time: 2019-06-29 12:43:30
->>>>>>> Stashed changes
+* @Last Modified time: 2019-06-29 12:46:16
 */
 
 #ifndef _CONTROLADOR_CPP_
@@ -31,9 +27,6 @@ void Controlador::inicio(void) {
 
 }
 void Controlador::controla_temperatura() {
-<<<<<<< Updated upstream
-
-=======
 	int tempo_inicial = millis();
 	int tempo_atual = millis();
 	int delta_t = tempo_atual - tempo_inicial;
@@ -46,8 +39,6 @@ void Controlador::controla_temperatura() {
 		tempo_atual = millis();
 		delta_t = tempo_atual - tempo_inicial;
 	}
->>>>>>> Stashed changes
-}
 void Controlador::fim(void) {
 
 }
