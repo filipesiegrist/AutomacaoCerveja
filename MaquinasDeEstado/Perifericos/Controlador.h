@@ -18,6 +18,7 @@
 //Pino de atuacao PWM
 #define AQUECEDOR A1
 #define TEMPO_BRASSAGEM 10000
+#define TEMPERATURA  66
 
 
 class Controlador {
