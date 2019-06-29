@@ -16,19 +16,33 @@ Brassagem::Brassagem(void){
 }
 // Estados do sistema
 void Brassagem::inicio(bool resistencia){
-  bool resistencia=false;
+  Serial.println("Aguardando inicialização");
+  set_yellow();
+  esperaAcaoUsuario(BOTAO_ON_OFF);
+  reset();
   return;
 }
 void Brassagem::T70G(void){
-
+  Serial.println("Aguardando temperatuda >= 70");
+  led.set_green();
+  bomba::liga();
+  esquenta(70);
+  bomba::desliga();
+  reset();
   return;
 }
 void Brassagem::add_ing(void){
-
+  Serial.println("Adicione ingredientes");
+  set_yellow();
+  esperaAcaoUsuario(BOTAO_ON_OFF);
+  reset();
   return;
 }
 void Brassagem::misturar(void){
-
+  Serial.println("Adicione ingredientes");
+  set_yellow();
+  esperaAcaoUsuario(BOTAO_ON_OFF);
+  reset();
   return;
 }
 void Brassagem::esperar(void){
