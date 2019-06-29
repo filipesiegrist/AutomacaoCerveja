@@ -8,6 +8,8 @@
 #ifndef _BRASSAGEM_H_
 #define _BRASSAGEM_H_
 
+
+
 class Brassagem {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
