@@ -7,30 +7,32 @@
 
 #ifndef _PROCESSO_H_
 #define _PROCESSO_H_
-#include <Arduino.h>
+// #include <Arduino.h>
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "/Etapas/Brassagem.h"
-#include "/Etapas/Fervura.h"
-#include "/Etapas/Recirculacao.h"
-#include "/Perifericos/Bomba.h"
-#include "/Perifericos/Controlador.h"
-#include "/Perifericos/Leds.h"
-
+#include "./Etapas/Brassagem.h"
+#include "./Etapas/Fervura.h"
+#include "./Etapas/Recirculacao.h"
+#include "./Perifericos/Bomba.h"
+#include "./Perifericos/Controlador.h"
+#include "./Perifericos/Leds.h"
 
 class Processo {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
-	bool resistencia=false;
-	bool bomba=false;
+	bool resistencia;
+	bool bomba;
 
 	// A implementacao da maquina estados sera nesta funcao:
-	Processo();
+	Processo(void);
 
 	// Estados do sistema
-	class brassagem(void);
-	class recirculacao(void);
-	class fervura(void);
+	Brassagem brassagem;
+	Recirculacao recirculacao;
+	Fervura fervura;
 
 	~Processo();
 };

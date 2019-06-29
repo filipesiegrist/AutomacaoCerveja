@@ -22,9 +22,9 @@ public:
 	void sedimento_ok(void);
 	void fim(void);
 
-	
+
 	~Recirculacao();
-	
+
 };
 
 #endif

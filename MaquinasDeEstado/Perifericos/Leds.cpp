@@ -8,21 +8,19 @@
 #ifndef _LEDS_CPP_
 #define _LEDS_CPP_
 
-#include <Arduino.h>
-
 #include "Leds.h"
 
 // A implementacao da maquina estados sera nesta funcao:
 Leds::Leds(){
-    pinMode(LED_VERMELHO, OUTPUT); 
-    pinMode(LED_VERDE   , OUTPUT); 
+    pinMode(LED_VERMELHO, OUTPUT);
+    pinMode(LED_VERDE   , OUTPUT);
     pinMode(LED_AMARELO , OUTPUT);
     reset();
 }
 
 void Leds::reset(void){
-    digitalWrite(LED_VERMELHO ,LOW); 
-    digitalWrite(LED_VERDE    ,LOW); 
+    digitalWrite(LED_VERMELHO ,LOW);
+    digitalWrite(LED_VERDE    ,LOW);
     digitalWrite(LED_AMARELO  ,LOW);
     return;
 }

@@ -37,9 +37,9 @@ public:
 	bool passou_do_limite_minimo(void);
 	void fim(void);
 
-	
+
 	~SensorTemperatura();
-	
+
 };
 
 #endif

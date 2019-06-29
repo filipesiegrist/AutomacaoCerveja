@@ -8,7 +8,7 @@
 #ifndef _CONTROLADOR_H_
 #define _CONTROLADOR_H_
 
-#include <Arduino.h>
+// #include <Arduino.h>
 
 // Constante de controle
 #define Kp 1
@@ -41,9 +41,9 @@ public:
 	void controla_temperatura();
 	void fim(void);
 
-	
+
 	~Controlador();
-	
+
 };
 
 #endif

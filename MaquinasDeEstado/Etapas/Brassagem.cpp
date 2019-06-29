@@ -8,14 +8,12 @@
 #ifndef _BRASSAGEM_CPP_
 #define _BRASSAGEM_CPP_
 
-#include "Brassagem.h"
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
 // A implementacao da maquina estados sera nesta funcao:
-Brassagem::Brassagem(){
+Brassagem::Brassagem(void){
 
 }
-
 // Estados do sistema
 void Brassagem::inicio(void){
 
