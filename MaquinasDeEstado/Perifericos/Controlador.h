@@ -8,7 +8,9 @@
 #ifndef _CONTROLADOR_H_
 #define _CONTROLADOR_H_
 
-// #include <Arduino.h>
+#include <Arduino.h>
+
+#include "SensorTemperatura.h"
 
 // Constante de controle
 #define Kp 1
@@ -19,8 +21,12 @@
 #define TEMPERATURA_PADRAO 65
 #define TEMPO_BRASSAGEM 50*60*1000 // ms, ou 50 minutos
 
+#define TEMPERATURA_PADRAO 65
+
 class Controlador {
 private:
+	// Sensor com os dados de entrada
+	SensorTemperatura sensor(TEMPERATURA_PADRAO);
 
 	// Calcula a diferenca entre a temperatura medida e a temperatura de referencia
 	int desvio_de_temperatura(int temperatura_medida);
@@ -36,14 +42,11 @@ public:
 	int temperatura_referencia;
 
 	// A implementacao da maquina estados sera nesta funcao:
-	Controlador();
+	Controlador(int temp_objetivo);
 
 	// Estados do sistema
-	void inicio(void);
 	// Instancia um sensor, um atuador e gera saidas de duty cicles conforme as leituras mudam.
 	void controla_temperatura();
-	void fim(void);
-
 
 	~Controlador();
 
