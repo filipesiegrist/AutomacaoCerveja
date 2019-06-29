@@ -16,12 +16,9 @@
 //Pino de atuacao PWM
 #define AQUECEDOR 5A1
 
-<<<<<<< Updated upstream
-=======
 #define TEMPERATURA_PADRAO 65
 #define TEMPO_BRASSAGEM 50*60*1000 // ms, ou 50 minutos
 
->>>>>>> Stashed changes
 class Controlador {
 private:
 
