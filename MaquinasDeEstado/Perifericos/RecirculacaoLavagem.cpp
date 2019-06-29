@@ -2,7 +2,7 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:27:30
 * @Last Modified by:   filipe-ufsc
-* @Last Modified time: 2019-06-29 18:10:13
+* @Last Modified time: 2019-06-29 19:31:16
 */
 
 #ifndef _RECIRCULACAO_LAVAGEM_CPP_
@@ -22,6 +22,10 @@ void RecirculacaoLavagem::inicio(void){
 
 void RecirculacaoLavagem::transfere(void){
 	esperaAcaoUsuario(BOTAO_ACAO);
+}
+
+void RecirculacaoLavagem::fim(void) {
+	Serial.println("Fim da Recirculacao e da lavagem.");
 }
 
 #endif
