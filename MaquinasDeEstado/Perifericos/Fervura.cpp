@@ -2,11 +2,13 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:27:30
 * @Last Modified by:   filipe-ufsc
-* @Last Modified time: 2019-06-29 17:51:55
+* @Last Modified time: 2019-06-29 18:06:56
 */
 
 #ifndef _FERVURA_CPP_
 #define _FERVURA_CPP_
+
+#include <Arduino.h>
 
 #include "Fervura.h"
 #include "Controlador.h"
