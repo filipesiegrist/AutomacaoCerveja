@@ -8,67 +8,86 @@
 #ifndef _BRASSAGEM_CPP_
 #define _BRASSAGEM_CPP_
 
+#include "Brassagem.h"
+
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
 // A implementacao da maquina estados sera nesta funcao:
-Brassagem::Brassagem(void){
-
+Brassagem::Brassagem(Leds &led){
+  led=led;
+  controlador.temperatura_referencia=66;
 }
 // Estados do sistema
-void Brassagem::inicio(bool resistencia){
+void Brassagem::inicio(void){
   Serial.println("Aguardando inicialização");
-  set_yellow();
+  led.set_yellow();
   esperaAcaoUsuario(BOTAO_ON_OFF);
-  reset();
+  led.reset();
   return;
 }
 void Brassagem::T70G(void){
-  Serial.println("Aguardando temperatuda >= 70");
+  Serial.println("Aguardando temperatura >= 70");
   led.set_green();
-  bomba::liga();
-  esquenta(70);
-  bomba::desliga();
-  reset();
+  bomba.liga();
+  controlador.esquenta(70);
+  bomba.desliga();
+  led.reset();
   return;
 }
 void Brassagem::add_ing(void){
-  Serial.println("Adicione ingredientes");
-  set_yellow();
+  Serial.println("Adicione ingredientes !!");
+  led.set_yellow();
   esperaAcaoUsuario(BOTAO_ON_OFF);
-  reset();
+  led.reset();
   return;
 }
 void Brassagem::misturar(void){
-  Serial.println("Adicione ingredientes");
-  set_yellow();
+  Serial.println("Misture os ingredientes !!");
+  led.set_yellow();
   esperaAcaoUsuario(BOTAO_ON_OFF);
-  reset();
+  led.reset();
   return;
 }
 void Brassagem::esperar(void){
-
+  Serial.println("Aguarde 60 mins");
+  led.set_green();
+  // Controlador controlador(66);
+  // mantem por 60 mins
+  controlador.controla_temperatura();
+  led.reset();
   return;
 }
 void Brassagem::aguarda_iodo(void){
-
-  return;
-}
-void Brassagem::iodo_ok(void){
-
+  bool sair=false;
+  led.set_green();
+  Serial.println("Teste do Iodo! aguarda 15 mins");
+  // do{
+  //     led.set_green();
+  //     delay(5000);
+  //     led.set_yellow();
+  //     Serial.println("iodo OK?");
+  //     // while(digitalRead(BOTAO_ON_OFF)==LOW && digitalRead(BOTAO_ACAO)==LOW){
+  //     //   if(digitalRead(BOTAO_ON_OFF)==HIGH){
+  //     //       sair=true;
+  //     //   }else{
+  //     //       Serial.println("Aguarde 15 mins");
+  //     //   }
+  //     // }
+  // }while(sair==false);
+  led.reset();
   return;
 }
 void Brassagem::T75G(void){
-
+  Serial.println("Aguardando temperatura >= 75");
+  led.set_green();
+  bomba.liga();
+  controlador.esquenta(75);
+  bomba.desliga();
+  led.reset();
   return;
 }
 void Brassagem::fim(void){
-
+	Serial.println("Fim da brassagem.");
   return;
 }
-
-Brassagem::~Brassagem(){
-
-}
-
-
 #endif

@@ -39,7 +39,7 @@ public:
 	int temperatura_referencia;
 
 	// A implementacao da maquina estados sera nesta funcao:
-	Controlador(int temp_objetivo);
+	Controlador(void);
 
 	// Estados do sistema
 	// Instancia um sensor, um atuador e gera saidas de duty cicles conforme as leituras mudam.

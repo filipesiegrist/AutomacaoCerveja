@@ -35,9 +35,9 @@ float Controlador::saida_duty_cicle(int temperatura_medida) {
 	else if (saida < 0) saida = 0;
 	return saida;
 }
-Controlador::Controlador(int temp_objetivo) {
-	sensor.temperatura_objetivo = temp_objetivo;
-	temperatura_referencia = temp_objetivo;
+Controlador::Controlador(void) {
+	// sensor.temperatura_objetivo = temp_objetivo;
+	// temperatura_referencia = temp_objetivo;
 }
 void Controlador::controla_temperatura() {
 	int tempo_inicial = millis();
