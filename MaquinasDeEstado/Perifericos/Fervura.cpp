@@ -2,7 +2,7 @@
 * @Author: Filipe Ernesto Siegrist Gonçalves
 * @Date:   2019-06-20 10:27:30
 * @Last Modified by:   filipe-ufsc
-* @Last Modified time: 2019-06-29 18:06:56
+* @Last Modified time: 2019-06-29 19:30:36
 */
 
 #ifndef _FERVURA_CPP_
@@ -29,13 +29,13 @@ Fervura::Fervura() {
 
 // Estados do sistema
 void Fervura::fervendo(void) {
-  	Serial.println("Aperte o botao on/off quando a mistura ferver.");
+  	Serial.println("Aperte o botao de acao quando a mistura ferver.");
   	esperaAcaoUsuario(BOTAO_ACAO);
   	desligaAquecedor();
 }
 
 void Fervura::adicione15g(void) {
-	Serial.println("Adicione 15g de Lupulo e aperte o botao on/off quando finalizar.");
+	Serial.println("Adicione 15g de Lupulo e aperte o botao de acao quando finalizar.");
   	esperaAcaoUsuario(BOTAO_ACAO);
 }
 
@@ -46,7 +46,7 @@ void Fervura::wait55(void) {
 }
 
 void Fervura::add_resto(void) {
-  Serial.println("Adicione o resto do Lupulo e aperte o botao on/off quando finalizar.");
+  Serial.println("Adicione o resto do Lupulo e aperte o botao de acao quando finalizar.");
   	esperaAcaoUsuario(BOTAO_ACAO);
 }
 

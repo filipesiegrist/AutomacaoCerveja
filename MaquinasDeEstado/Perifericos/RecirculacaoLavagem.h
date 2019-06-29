@@ -17,6 +17,7 @@ public:
 	// Estados do sistema
 	void inicio(void);
 	void transfere(void);
+	void fim(void);
 
 };
 
