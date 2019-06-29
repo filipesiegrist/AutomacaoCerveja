@@ -9,7 +9,54 @@
 #define _BRASSAGEM_CPP_
 
 #include "Brassagem.h"
+// Flag que indica se ocorreu algum erro no sistema.
+// bool erro_de_funcionamento;
+// A implementacao da maquina estados sera nesta funcao:
+Brassagem::Brassagem(){
 
+}
+
+// Estados do sistema
+void Brassagem::inicio(void){
+
+  return;
+}
+void Brassagem::T70G(void){
+
+  return;
+}
+void Brassagem::add_ing(void){
+
+  return;
+}
+void Brassagem::misturar(void){
+
+  return;
+}
+void Brassagem::esperar(void){
+
+  return;
+}
+void Brassagem::aguarda_iodo(void){
+
+  return;
+}
+void Brassagem::iodo_ok(void){
+
+  return;
+}
+void Brassagem::T75G(void){
+
+  return;
+}
+void Brassagem::fim(void){
+
+  return;
+}
+
+Brassagem::~Brassagem(){
+
+}
 
 
 #endif
