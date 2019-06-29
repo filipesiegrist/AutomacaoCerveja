@@ -4,7 +4,6 @@
 * @Last Modified by:   filipe-ufsc
 * @Last Modified time: 2019-06-20 10:20:49
 */
-
 #ifndef _SENSOR_TEMPERATURA_H_
 #define _SENSOR_TEMPERATURA_H_
 
@@ -37,9 +36,9 @@ public:
 	bool passou_do_limite_minimo(void);
 	void fim(void);
 
-	
+
 	~SensorTemperatura();
-	
+
 };
 
 #endif

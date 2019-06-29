@@ -12,10 +12,9 @@ class Brassagem {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
-
 	// A implementacao da maquina estados sera nesta funcao:
-	Brassagem();
-
+	Brassagem(void);
+	~Brassagem();
 	// Estados do sistema
 	void inicio(void);
 	void T70G(void);
@@ -26,8 +25,7 @@ public:
 	void iodo_ok(void);
 	void T75G(void);
 	void fim(void);
-
-	~Brassagem();
+	// Processo asd;
 };
 
 #endif
