@@ -39,7 +39,7 @@ Controlador::Controlador(void) {
 	sensor.temperatura_objetivo = TEMPERATURA;
 	temperatura_referencia = TEMPERATURA;
 }
-void Controlador::controla_temperatura(int temperatura_in) {
+int Controlador::controla_temperatura(int temperatura_in) {
 	sensor.temperatura_objetivo = temperatura_in;
 	temperatura_referencia = temperatura_in;
 	int tempo_inicial = millis();
@@ -57,11 +57,12 @@ void Controlador::controla_temperatura(int temperatura_in) {
 		tempo_atual = millis();
 		delta_t = tempo_atual - tempo_inicial;
 	}
-	Serial.println(temperatura);
+	// Serial.println(temperatura);
 	analogWrite(AQUECEDOR, 0);
+	return temperatura;
 }
 
-void Controlador::esquenta(int temperatura_in) {
+int Controlador::esquenta(int temperatura_in) {
 	sensor.temperatura_objetivo = temperatura_in;
 	temperatura_referencia = temperatura_in;
 	int temperatura = sensor.leitura();
@@ -73,6 +74,7 @@ void Controlador::esquenta(int temperatura_in) {
 		// Serial.println(duty_cycle);
 		int saida = map(duty_cycle, 0, 1, 0, 1023);
 		ligaLed(AQUECEDOR, saida);
+		return temperatura;
 	}
 	Serial.println(temperatura);
 	analogWrite(AQUECEDOR, 0);
@@ -82,11 +84,13 @@ Controlador::~Controlador() {
 		analogWrite(AQUECEDOR, 0);
 }
 
-void ligaAquecedor() {
+bool ligaAquecedor() {
 	analogWrite(AQUECEDOR,1023);
+	return true;
 }
-void desligaAquecedor() {
+bool desligaAquecedor() {
 	analogWrite(AQUECEDOR,0);
+	return true;
 }
 
 #endif

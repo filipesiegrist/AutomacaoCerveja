@@ -9,7 +9,7 @@
 #define _BRASSAGEM_CPP_
 
 #include "Brassagem.h"
-#define TEMPO_IODO 5000
+#define TEMPO_IODO 3000
 
 
 // Flag que indica se ocorreu algum erro no sistema.
@@ -29,14 +29,14 @@ void Brassagem::inicio(void){
   led.reset();
   return;
 }
-void Brassagem::T70G(void){
+int Brassagem::T70G(int temperatura){
   Serial.println("Aguardando temperatura >= 70");
   led.set_green();
   bomba.liga();
-  controlador.esquenta(70);
+  int temp=controlador.esquenta(temperatura);
   bomba.desliga();
   led.reset();
-  return;
+  return temp;
 }
 void Brassagem::add_ing(void){
   Serial.println("Adicione ingredientes !!");
@@ -61,7 +61,7 @@ void Brassagem::esperar(void){
   led.reset();
   return;
 }
-void Brassagem::aguarda_iodo(void){
+bool Brassagem::aguarda_iodo(void){
   int tentativas=0;
   bool sair=false;
   led.set_green();
@@ -86,16 +86,16 @@ void Brassagem::aguarda_iodo(void){
     }
   }while(sair==false);
   led.reset();
-  return;
+  return true;
 }
-void Brassagem::T75G(void){
+int Brassagem::T75G(int temperatura){
   Serial.println("Aguardando temperatura >= 75");
   led.set_green();
   bomba.liga();
-  controlador.esquenta(75);
+  int temp=controlador.esquenta(temperatura);
   bomba.desliga();
   led.reset();
-  return;
+  return temp;
 }
 void Brassagem::fim(void){
 	Serial.println("Fim da brassagem.");

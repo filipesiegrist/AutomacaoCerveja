@@ -42,7 +42,7 @@ bool processos(void){
   if(verifica(ERROR,RGB))return false;
   Processo1.inicio();
   if(verifica(ERROR,RGB))return false;
-  Processo1.T70G();
+  Processo1.T70G(70);
   if(verifica(ERROR,RGB))return false;
   clear();
   Processo1.add_ing();
@@ -57,7 +57,7 @@ bool processos(void){
   Processo1.aguarda_iodo();
   if(verifica(ERROR,RGB))return false;
   clear();
-  Processo1.T75G();
+  Processo1.T75G(75);
   if(verifica(ERROR,RGB))return false;
   clear();
   Processo1.fim();

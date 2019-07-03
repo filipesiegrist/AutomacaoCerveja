@@ -23,12 +23,12 @@ public:
 	// ~Brassagem();
 	// Estados do sistema
 	void inicio(void);
-	void T70G(void);
+	int T70G(int temperatura);
 	void add_ing(void);
 	void misturar(void);
 	void esperar(void);
-	void aguarda_iodo(void);
-	void T75G(void);
+	bool aguarda_iodo(void);
+	int T75G(int temperatura);
 	void fim(void);
 	// Processo asd;
 	Leds &led;
