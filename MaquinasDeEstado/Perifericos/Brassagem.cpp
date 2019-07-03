@@ -53,6 +53,7 @@ void Brassagem::misturar(void){
 void Brassagem::esperar(void){
   Serial.println("Aguarde 60 mins");
   led.set_green();
+  controlador.temperatura_referencia = TEMPERATURA;
   controlador.controla_temperatura();
   led.reset();
   return;

@@ -8,6 +8,8 @@
 #ifndef _FERVURA_H_
 #define _FERVURA_H_
 
+#include "Leds.h"
+
 class Fervura {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.

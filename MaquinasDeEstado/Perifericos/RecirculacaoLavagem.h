@@ -8,6 +8,7 @@
 #ifndef _RECIRCULACAO_LAVAGEM_H_
 #define _RECIRCULACAO_LAVAGEM_H_
 
+#include "Leds.h"
 
 class RecirculacaoLavagem {
 public:

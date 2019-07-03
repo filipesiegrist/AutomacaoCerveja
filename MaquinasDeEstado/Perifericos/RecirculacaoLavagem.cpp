@@ -10,6 +10,7 @@
 
 #include <Arduino.h>
 #include "Botao.h"
+#include "Leds.h"
 #include "RecirculacaoLavagem.h"
 
 // Flag que indica se ocorreu algum erro no sistema.

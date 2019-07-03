@@ -13,6 +13,7 @@
 #include "Fervura.h"
 #include "Controlador.h"
 #include "Botao.h"
+#include "Leds.h"
 
 #define TEMPO_INICIO 55 // minutos
 #define TEMPO_FIM 5 // minutos
@@ -32,6 +33,7 @@ void Fervura::fervendo(void) {
   	Serial.println("Aperte o botao de acao quando a mistura ferver.");
   	esperaAcaoUsuario(BOTAO_ACAO);
   	desligaAquecedor();
+	Serial.println("Aquecimento desligado.");
 }
 
 void Fervura::adicione15g(void) {
@@ -57,7 +59,7 @@ void Fervura::wait5(void) {
 }
 
 void Fervura::fim(void) {
-	Serial.println("Fim da fervura. Desligando o aquecedor.");
+	Serial.println("Fim da fervura.");
 }
 
 
