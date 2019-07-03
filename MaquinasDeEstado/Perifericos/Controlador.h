@@ -45,7 +45,7 @@ public:
 	// Estados do sistema
 	// Instancia um sensor, um atuador e gera saidas de duty cicles conforme as leituras mudam.
 	int controla_temperatura(int temperatura_in);
-	void esquenta(int temperatura);
+	int esquenta(int temperatura);
 
 	~Controlador();
 };
