@@ -33,10 +33,10 @@ int Brassagem::T70G(int temperatura){
   Serial.println("Aguardando temperatura >= 70");
   led.set_green();
   bomba.liga();
-  int temp=controlador.esquenta(temperatura);
+  controlador.esquenta(temperatura);
   bomba.desliga();
   led.reset();
-  return temp;
+  return temperatura;
 }
 void Brassagem::add_ing(void){
   Serial.println("Adicione ingredientes !!");
@@ -92,7 +92,8 @@ int Brassagem::T75G(int temperatura){
   Serial.println("Aguardando temperatura >= 75");
   led.set_green();
   bomba.liga();
-  int temp=controlador.esquenta(temperatura);
+  controlador.esquenta(temperatura);
+  int temp = controlador.temperatura_referencia;
   bomba.desliga();
   led.reset();
   return temp;
