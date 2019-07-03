@@ -8,13 +8,15 @@
 #ifndef _FERVURA_H_
 #define _FERVURA_H_
 
+#include "Leds.h"
+
 class Fervura {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
 
 	// A implementacao da maquina estados sera nesta funcao:
-	Fervura();
+	Fervura(Leds &led,bool *gg);
 
 	// Estados do sistema
 	void fervendo();
@@ -23,6 +25,9 @@ public:
 	void add_resto(void);
 	void wait5(void);
 	void fim(void);
+
+	Leds &led;
+	bool *ERROR;
 
 };
 

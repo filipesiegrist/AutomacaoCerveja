@@ -17,7 +17,7 @@
 
 //Pino de atuacao PWM
 #define AQUECEDOR A1
-#define TEMPO_BRASSAGEM 10000
+#define TEMPO_BRASSAGEM 5000
 #define TEMPERATURA  66
 
 
@@ -44,15 +44,15 @@ public:
 
 	// Estados do sistema
 	// Instancia um sensor, um atuador e gera saidas de duty cicles conforme as leituras mudam.
-	void controla_temperatura();
-	void esquenta(int temperatura);
+	int controla_temperatura(int temperatura_in);
+	int esquenta(int temperatura);
 
 	~Controlador();
 };
 
 
 // Para utilizar apenas ligando e desligando a resistencia:
-void ligaAquecedor();
-void desligaAquecedor();
+bool ligaAquecedor();
+bool desligaAquecedor();
 
 #endif

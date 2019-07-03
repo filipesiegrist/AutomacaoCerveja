@@ -13,8 +13,8 @@
 #define ENTRADA_SENSOR A0
 
 // Temperaturas de referencia para o mapeamento do sinal do sensor
-#define TEMPERATURA_MINIMA_POSSIVEL 45
-#define TEMPERATURA_MAXIMA_POSSIVEL 85
+#define TEMPERATURA_MINIMA_POSSIVEL 20
+#define TEMPERATURA_MAXIMA_POSSIVEL 100
 
 #define TEMPERATURA_PADRAO 65
 

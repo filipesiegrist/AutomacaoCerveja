@@ -15,4 +15,8 @@ void iniciaBotoes();
 
 void esperaAcaoUsuario(int botao);
 
+// Retorna verdadeiro se apertou o primeiro botao,
+// False se apertou o segundo.
+bool esperaApertoDeUmBotao(int botao_1, int botao_2);
+
 #endif

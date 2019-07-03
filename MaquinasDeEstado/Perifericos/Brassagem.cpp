@@ -9,12 +9,16 @@
 #define _BRASSAGEM_CPP_
 
 #include "Brassagem.h"
+#define TEMPO_IODO 3000 // 15 minutos
+
 
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
 // A implementacao da maquina estados sera nesta funcao:
-Brassagem::Brassagem(Leds &led){
+Brassagem::Brassagem(Leds &led,bool *gg){
   led=led;
+
+  this->ERROR=gg;
 }
 // Estados do sistema
 void Brassagem::inicio(void){
@@ -25,14 +29,14 @@ void Brassagem::inicio(void){
   led.reset();
   return;
 }
-void Brassagem::T70G(void){
+int Brassagem::T70G(int temperatura){
   Serial.println("Aguardando temperatura >= 70");
   led.set_green();
   bomba.liga();
-  controlador.esquenta(70);
+  int temp=controlador.esquenta(temperatura);
   bomba.desliga();
   led.reset();
-  return;
+  return temp;
 }
 void Brassagem::add_ing(void){
   Serial.println("Adicione ingredientes !!");
@@ -53,38 +57,45 @@ void Brassagem::misturar(void){
 void Brassagem::esperar(void){
   Serial.println("Aguarde 60 mins");
   led.set_green();
-  controlador.controla_temperatura();
+  controlador.controla_temperatura(66);
   led.reset();
   return;
 }
-void Brassagem::aguarda_iodo(void){
+bool Brassagem::aguarda_iodo(void){
+  int tentativas=0;
   bool sair=false;
   led.set_green();
   Serial.println("Teste do Iodo! aguarda 15 mins");
-  // do{
-  //     led.set_green();
-  //     delay(5000);
-  //     led.set_yellow();
-  //     Serial.println("iodo OK?");
-  //     // while(digitalRead(BOTAO_ON_OFF)==LOW && digitalRead(BOTAO_ACAO)==LOW){
-  //     //   if(digitalRead(BOTAO_ON_OFF)==HIGH){
-  //     //       sair=true;
-  //     //   }else{
-  //     //       Serial.println("Aguarde 15 mins");
-  //     //   }
-  //     // }
-  // }while(sair==false);
+  do{
+    tentativas++;
+    led.set_green();
+    delay(TEMPO_IODO);
+    led.set_yellow();
+    Serial.println("Tesde do iodo OK?");
+    Serial.println("Aperte botão ON/OFF para Sim");
+    Serial.println("Aperte botão AÇÃO para Não");
+    if(esperaApertoDeUmBotao(BOTAO_ON_OFF,BOTAO_ACAO)){
+        sair=true;
+    }else{
+      if(tentativas>2){
+        *ERROR=true;
+        // Serial.println(*ERROR);
+        break;
+      }
+      Serial.println("Aguarde 15 mins");
+    }
+  }while(sair==false);
   led.reset();
-  return;
+  return true;
 }
-void Brassagem::T75G(void){
+int Brassagem::T75G(int temperatura){
   Serial.println("Aguardando temperatura >= 75");
   led.set_green();
   bomba.liga();
-  controlador.esquenta(75);
+  int temp=controlador.esquenta(temperatura);
   bomba.desliga();
   led.reset();
-  return;
+  return temp;
 }
 void Brassagem::fim(void){
 	Serial.println("Fim da brassagem.");

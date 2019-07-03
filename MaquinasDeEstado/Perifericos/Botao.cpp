@@ -24,4 +24,16 @@ void esperaAcaoUsuario(int botao) {
   }
 }
 
+bool esperaApertoDeUmBotao(int botao_1, int botao_2) {
+  int valor_1 = digitalRead(botao_1);
+  int valor_2 = digitalRead(botao_2);
+  while (valor_1 == LOW && valor_2 == LOW) {
+    valor_1 = digitalRead(botao_1);
+    valor_2 = digitalRead(botao_2);
+    delay(10);
+  }
+  if (valor_1 == HIGH) return true;
+  else return false;
+}
+
 #endif
