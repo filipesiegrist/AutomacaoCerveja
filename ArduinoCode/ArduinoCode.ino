@@ -28,14 +28,14 @@ void setup() {
   delay(1000);
   Processo1.fim();
   
-  RecirculacaoLavagem Processo2;
+  RecirculacaoLavagem Processo2(RGB);
   delay(500);
   Processo2.inicio();
   delay(500);
   Processo2.transfere();
   delay(500);
   
-  Fervura Processo3;
+  Fervura Processo3(RGB);
   Processo3.fervendo();
   delay(500);
   Processo3.adicione15g();

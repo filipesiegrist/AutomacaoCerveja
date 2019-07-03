@@ -72,10 +72,9 @@ void Brassagem::aguarda_iodo(void){
       Serial.println("Aperte BOTAO_ON_OFF para Sim");
       Serial.println("Aperte BOTAO_ACAO para Não");
       if(esperaApertoDeUmBotao(BOTAO_ON_OFF,BOTAO_ACAO)){
-            sair=true;
-        }else{
-            Serial.println("Aguarde 15 mins");
-        }
+          sair=true;
+      }else{
+          Serial.println("Aguarde 15 mins");
       }
   }while(sair==false);
   led.reset();

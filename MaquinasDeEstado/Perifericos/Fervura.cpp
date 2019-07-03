@@ -48,7 +48,7 @@ void Fervura::adicione15g(void) {
 }
 
 void Fervura::wait55(void) {
-	led.set_greenw();
+	led.set_green();
 	Serial.println("Esperando 55 minutos.");
   	int tempo = TEMPO_INICIO; //converte para ms
   	delay(tempo);

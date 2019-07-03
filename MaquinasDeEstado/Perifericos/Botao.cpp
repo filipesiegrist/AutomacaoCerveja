@@ -33,7 +33,7 @@ bool esperaApertoDeUmBotao(int botao_1, int botao_2) {
     delay(10);
   }
   if (valor_1 == HIGH) return true;
-  else return False;
+  else return false;
 }
 
 #endif

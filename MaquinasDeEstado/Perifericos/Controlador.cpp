@@ -43,9 +43,10 @@ void Controlador::controla_temperatura() {
 	int tempo_inicial = millis();
 	int tempo_atual = millis();
 	int delta_t = tempo_atual - tempo_inicial;
+	int temperatura;
 	while (delta_t < TEMPO_BRASSAGEM) {
 		delay(20);
-		int temperatura = sensor.leitura();
+		temperatura = sensor.leitura();
 		float duty_cycle = saida_duty_cicle(temperatura);
 		// Serial.println(temperatura);
 		// Serial.println(duty_cycle);
