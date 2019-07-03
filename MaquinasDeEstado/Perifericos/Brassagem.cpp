@@ -9,7 +9,7 @@
 #define _BRASSAGEM_CPP_
 
 #include "Brassagem.h"
-#define TEMPO_IODO 3000
+#define TEMPO_IODO 3000 // 15 minutos
 
 
 // Flag que indica se ocorreu algum erro no sistema.

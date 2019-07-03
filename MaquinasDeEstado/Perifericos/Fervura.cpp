@@ -15,8 +15,8 @@
 #include "Botao.h"
 #include "Leds.h"
 
-#define TEMPO_INICIO 20000 // minutos
-#define TEMPO_FIM 10000 // minutos
+#define TEMPO_INICIO 8000 // 55 minutos
+#define TEMPO_FIM 3000 // 5 minutos
 
 	// Flag que indica se ocorreu algum erro no sistema.
 	// bool erro_de_funcionamento;
