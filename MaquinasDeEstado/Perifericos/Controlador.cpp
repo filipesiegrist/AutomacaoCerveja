@@ -39,7 +39,9 @@ Controlador::Controlador(void) {
 	sensor.temperatura_objetivo = TEMPERATURA;
 	temperatura_referencia = TEMPERATURA;
 }
-void Controlador::controla_temperatura() {
+void Controlador::controla_temperatura(int temperatura_in) {
+	sensor.temperatura_objetivo = temperatura_in;
+	temperatura_referencia = temperatura_in;
 	int tempo_inicial = millis();
 	int tempo_atual = millis();
 	int delta_t = tempo_atual - tempo_inicial;

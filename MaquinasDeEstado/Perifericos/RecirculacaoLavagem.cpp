@@ -16,8 +16,9 @@
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
 
-RecirculacaoLavagem::RecirculacaoLavagem(Leds &led){
+RecirculacaoLavagem::RecirculacaoLavagem(Leds &led,bool *gg){
 	led=led;
+	this->ERROR=gg;
 }
 
 

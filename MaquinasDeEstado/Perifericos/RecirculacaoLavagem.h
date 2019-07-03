@@ -14,13 +14,14 @@ class RecirculacaoLavagem {
 public:
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
-	RecirculacaoLavagem(Leds &led);
+	RecirculacaoLavagem(Leds &led,bool *gg);
 	// Estados do sistema
 	void inicio(void);
 	void transfere(void);
 	void fim(void);
 
 	Leds &led;
+	bool *ERROR;
 
 };
 

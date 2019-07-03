@@ -16,7 +16,7 @@ public:
 	bool erro_de_funcionamento;
 
 	// A implementacao da maquina estados sera nesta funcao:
-	Fervura(Leds &led);
+	Fervura(Leds &led,bool *gg);
 
 	// Estados do sistema
 	void fervendo();
@@ -27,6 +27,7 @@ public:
 	void fim(void);
 
 	Leds &led;
+	bool *ERROR;
 
 };
 

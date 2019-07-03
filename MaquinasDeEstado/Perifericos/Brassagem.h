@@ -19,7 +19,7 @@ public:
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
 	// A implementacao da maquina estados sera nesta funcao:
-	Brassagem(Leds &led);
+	Brassagem(Leds &led,bool *gg);
 	// ~Brassagem();
 	// Estados do sistema
 	void inicio(void);
@@ -32,6 +32,7 @@ public:
 	void fim(void);
 	// Processo asd;
 	Leds &led;
+	bool *ERROR;
 	Bomba bomba;
 	Controlador controlador;
 };
