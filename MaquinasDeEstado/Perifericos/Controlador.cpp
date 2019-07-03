@@ -47,13 +47,14 @@ void Controlador::controla_temperatura() {
 		delay(20);
 		int temperatura = sensor.leitura();
 		float duty_cycle = saida_duty_cicle(temperatura);
-		Serial.println(temperatura);
-		Serial.println(duty_cycle);
+		// Serial.println(temperatura);
+		// Serial.println(duty_cycle);
 		int saida = map(duty_cycle, 0, 1, 0, 1023);
 		ligaLed(AQUECEDOR, saida);
 		tempo_atual = millis();
 		delta_t = tempo_atual - tempo_inicial;
 	}
+	Serial.println(temperatura);
 	analogWrite(AQUECEDOR, 0);
 }
 
@@ -65,11 +66,12 @@ void Controlador::esquenta(int temperatura_in) {
 		delay(20);
 		temperatura = sensor.leitura();
 		float duty_cycle = saida_duty_cicle(temperatura);
-		Serial.println(temperatura);
-		Serial.println(duty_cycle);
+		// Serial.println(temperatura);
+		// Serial.println(duty_cycle);
 		int saida = map(duty_cycle, 0, 1, 0, 1023);
 		ligaLed(AQUECEDOR, saida);
 	}
+	Serial.println(temperatura);
 	analogWrite(AQUECEDOR, 0);
 }
 

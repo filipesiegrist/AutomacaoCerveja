@@ -16,16 +16,24 @@
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
 
+RecirculacaoLavagem::RecirculacaoLavagem(Leds &led){
+	led=led;
+}
+
+
 // Estados do sistema
 void RecirculacaoLavagem::inicio(void){
+	led.set_green();
 	Serial.println("Inicie a recirculacao e a lavagem. Aperte o botao de acao quando finaliza-las.");
 }
 
 void RecirculacaoLavagem::transfere(void){
+	led.set_yellow();
 	esperaAcaoUsuario(BOTAO_ACAO);
 }
 
 void RecirculacaoLavagem::fim(void) {
+	led.set_green();
 	Serial.println("Fim da Recirculacao e da lavagem.");
 }
 

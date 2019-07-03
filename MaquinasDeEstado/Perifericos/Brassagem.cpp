@@ -9,6 +9,8 @@
 #define _BRASSAGEM_CPP_
 
 #include "Brassagem.h"
+#define TEMPO_IODO 5000
+
 
 // Flag que indica se ocorreu algum erro no sistema.
 // bool erro_de_funcionamento;
@@ -62,19 +64,20 @@ void Brassagem::aguarda_iodo(void){
   bool sair=false;
   led.set_green();
   Serial.println("Teste do Iodo! aguarda 15 mins");
-  // do{
-  //     led.set_green();
-  //     delay(5000);
-  //     led.set_yellow();
-  //     Serial.println("iodo OK?");
-  //     // while(digitalRead(BOTAO_ON_OFF)==LOW && digitalRead(BOTAO_ACAO)==LOW){
-  //     //   if(digitalRead(BOTAO_ON_OFF)==HIGH){
-  //     //       sair=true;
-  //     //   }else{
-  //     //       Serial.println("Aguarde 15 mins");
-  //     //   }
-  //     // }
-  // }while(sair==false);
+  do{
+      led.set_green();
+      delay(TEMPO_IODO);
+      led.set_yellow();
+      Serial.println("iodo OK? BOTAO_ON_OFFBOTAO_ACAO");
+      Serial.println("Aperte BOTAO_ON_OFF para Sim");
+      Serial.println("Aperte BOTAO_ACAO para Não");
+      if(esperaApertoDeUmBotao(BOTAO_ON_OFF,BOTAO_ACAO)){
+            sair=true;
+        }else{
+            Serial.println("Aguarde 15 mins");
+        }
+      }
+  }while(sair==false);
   led.reset();
   return;
 }

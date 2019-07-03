@@ -21,7 +21,9 @@
 	// Flag que indica se ocorreu algum erro no sistema.
 	// bool erro_de_funcionamento;
 	// A implementacao da maquina estados sera nesta funcao:
-Fervura::Fervura() {
+Fervura::Fervura(Leds &led) {
+	led=led;
+	led.set_green();
 	Serial.println("Iniciando a fervura.");
 	Serial.println("Aquecedor ligado.");
 	ligaAquecedor();
@@ -30,35 +32,44 @@ Fervura::Fervura() {
 
 // Estados do sistema
 void Fervura::fervendo(void) {
+	led.set_yellow();
   	Serial.println("Aperte o botao de acao quando a mistura ferver.");
   	esperaAcaoUsuario(BOTAO_ACAO);
+	  led.set_green();
   	desligaAquecedor();
 	Serial.println("Aquecimento desligado.");
 }
 
 void Fervura::adicione15g(void) {
+	led.set_yellow();
 	Serial.println("Adicione 15g de Lupulo e aperte o botao de acao quando finalizar.");
   	esperaAcaoUsuario(BOTAO_ACAO);
+	led.set_green();
 }
 
 void Fervura::wait55(void) {
+	led.set_greenw();
 	Serial.println("Esperando 55 minutos.");
   	int tempo = TEMPO_INICIO; //converte para ms
   	delay(tempo);
 }
 
 void Fervura::add_resto(void) {
-  Serial.println("Adicione o resto do Lupulo e aperte o botao de acao quando finalizar.");
+	led.set_yellow();
+  	Serial.println("Adicione o resto do Lupulo e aperte o botao de acao quando finalizar.");
   	esperaAcaoUsuario(BOTAO_ACAO);
+	led.set_green();
 }
 
 void Fervura::wait5(void) {
+	led.set_green();
 	Serial.println("Esperando 5 minutos.");
   	int tempo = TEMPO_FIM; //converte para ms
   	delay(tempo);
 }
 
 void Fervura::fim(void) {
+	led.set_green();
 	Serial.println("Fim da fervura.");
 }
 
