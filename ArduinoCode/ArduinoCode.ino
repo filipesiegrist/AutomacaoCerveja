@@ -91,7 +91,7 @@ bool processos(void){
   if(verifica(ERROR,RGB))return false;
   Serial.println("Cerveja concluida com Sucesso !!");
   Serial.println("Aperte o botão ON/OFF para resetar o programa");
-  RGB.set_green();
+  RGB.set_yellow();
   esperaAcaoUsuario(BOTAO_ON_OFF);
 }
 void setup() {

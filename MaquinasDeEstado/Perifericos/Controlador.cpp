@@ -53,12 +53,12 @@ int Controlador::controla_temperatura(int temperatura_in) {
 		Serial.println(temperatura);
 		// Serial.println(duty_cycle);
 		int saida = map(duty_cycle, 0, 1, 0, 255);
-		analogWrite(AQUECEDOR, saida);
+		atuacao(AQUECEDOR, saida);
 		tempo_atual = millis();
 		delta_t = tempo_atual - tempo_inicial;
 	}
 	// Serial.println(temperatura);
-	analogWrite(AQUECEDOR, 0);
+	atuacao(AQUECEDOR, 0);
 	return temperatura;
 }
 
@@ -73,11 +73,11 @@ int Controlador::esquenta(int temperatura_in) {
 		Serial.println(temperatura);
 		// Serial.println(duty_cycle);
 		int saida = map(duty_cycle, 0, 1, 0, 255);
-		analogWrite(AQUECEDOR, saida);
+		atuacao(AQUECEDOR, saida);
 
 	}
 	Serial.println(temperatura);
-	analogWrite(AQUECEDOR, 0);
+	atuacao(AQUECEDOR, 0);
 	return temperatura;
 }
 

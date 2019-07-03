@@ -17,14 +17,12 @@
 
 //Pino de atuacao PWM
 #define AQUECEDOR A1
-#define TEMPO_BRASSAGEM 5000
+#define TEMPO_BRASSAGEM 30000 //60 minutos
 #define TEMPERATURA  66
 
 
 class Controlador {
 private:
-	// Sensor com os dados de entrada
-	SensorTemperatura sensor;
 
 	// Calcula a diferenca entre a temperatura medida e a temperatura de referencia
 	int desvio_de_temperatura(int temperatura_medida);
@@ -33,6 +31,9 @@ private:
 	// Satura o duty cicle entre 0 e 1.
 	float saida_duty_cicle(int temperatura_medida);
 public:
+	// Sensor com os dados de entrada
+	SensorTemperatura sensor;
+
 	// Flag que indica se ocorreu algum erro no sistema.
 	bool erro_de_funcionamento;
 

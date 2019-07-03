@@ -71,7 +71,7 @@ bool Brassagem::aguarda_iodo(void){
     led.set_green();
     delay(TEMPO_IODO);
     led.set_yellow();
-    Serial.println("Tesde do iodo OK?");
+    Serial.println("Teste do iodo OK?");
     Serial.println("Aperte botão ON/OFF para Sim");
     Serial.println("Aperte botão AÇÃO para Não");
     if(esperaApertoDeUmBotao(BOTAO_ON_OFF,BOTAO_ACAO)){

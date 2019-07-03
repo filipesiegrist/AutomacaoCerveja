@@ -11,6 +11,10 @@
 #include <Arduino.h>
 #include "SensorTemperatura.h"
 
+
+#define LIMITE_MINIMO_BRASSAGEM 60
+#define LIMITE_MAXIMO_BRASSAGEM 70
+
 SensorTemperatura::SensorTemperatura() {
 	temperatura_objetivo = TEMPERATURA_PADRAO;
 }
@@ -23,11 +27,11 @@ int SensorTemperatura::leitura(void) {
 }
 
 bool SensorTemperatura::passou_do_limite_maximo(void) {
-	return (bool) leitura() > temperatura_maxima;
+	return (bool) leitura() > LIMITE_MAXIMO_BRASSAGEM;
 }
 
 bool SensorTemperatura::passou_do_limite_minimo(void) {
-	return (bool) leitura() < temperatura_minima;
+	return (bool) leitura() < LIMITE_MINIMO_BRASSAGEM;
 }
 
 bool SensorTemperatura::chegou_objetivo(void) {
